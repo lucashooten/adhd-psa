@@ -1,0 +1,69 @@
+#root {
+  width: 100vw;
+  min-width: 400px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-card {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.default {
+  background: #303030;
+  border: 1px solid #404040;
+  padding-bottom: 1em;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  background: rgba(30,30,30,60);
+  border-bottom: 1px solid lightblue; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: rgba(50,50,50, 90%);
+  backdrop-filter: blur(2px);
+  color: lightblue;
+  text-align: left;
+  padding: 1em;
+  border: 1px solid rgba(0,140,180);
+  font-weight: normal;
+  font-style: italic;
+  border-radius: 6px;
+  top: 130%;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
