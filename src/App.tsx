@@ -1,4 +1,7 @@
 import './App.css'
+import React, {useState, useEffect} from 'react'
+import Helmet from 'react-helmet'
+
 
 const relevantSymptoms = [
     "Missed messages",
@@ -51,8 +54,20 @@ const SectionCard = ({obj, headerProps, ...props}: CardProps) => (
 )
 
 export const App = () => {
+    const [authorName, setAuthorName] = useState('Lucas');
+    useEffect(() => setAuthorName(authorName), [authorName])
+
     return(
+
         <div className='App'>
+            <Helmet>
+                <title>
+                    {
+                        authorName? authorName.split(' ')[0] + '\'s PSA'
+                            : 'A Quick PSA'
+                    }
+                </title>
+            </Helmet>
             <div className="main-card">
             <h2 children={'Hi there!'}/>
                 <img style={{borderRadius: '100%'}} height={100} width={100} src="https://media.licdn.com/dms/image/D5603AQENkPcvHW-kZQ/profile-displayphoto-shrink_400_400/0/1680028853790?e=1704326400&v=beta&t=hMqK9r17PUpx98PK-qB0xEYTXQBARYf_nqQtNAtSfm8"/>
