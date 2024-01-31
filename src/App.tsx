@@ -1,6 +1,7 @@
 import './App.css'
 import React, {useState, useEffect} from 'react'
 import Helmet from 'react-helmet'
+import Headshot from './assets/1680028854516.jpeg'
 
 
 const relevantSymptoms = [
@@ -11,7 +12,9 @@ const relevantSymptoms = [
 
 const BulletList = ({listItems}: {listItems: string[]}) => (
     <ul children={listItems.map(i => <li key={i} children={i}/>)}/>
-
+)
+const HeadshotImg = () => (
+    <img style={{borderRadius: '100%'}} height={100} width={100} src={Headshot} />
 )
 
 const whatCanIDo = {
@@ -70,7 +73,7 @@ export const App = () => {
             </Helmet>
             <div className="main-card">
             <h2 children={'Hi there!'}/>
-                <img style={{borderRadius: '100%'}} height={100} width={100} src="https://media.licdn.com/dms/image/D5603AQENkPcvHW-kZQ/profile-displayphoto-shrink_400_400/0/1680028853790?e=1704326400&v=beta&t=hMqK9r17PUpx98PK-qB0xEYTXQBARYf_nqQtNAtSfm8"/>
+                <HeadshotImg/>
                 <p>
                     <b>Lucas wanted you to know that he suffers from a very pesky{' '}
                     <span className="tooltip"> Neurodevelopmental Brain Disorder <span className="tooltiptext">Neurodevelopmental disorders are a group of conditions in which the growth and development of the brain is affected. This can impact an individual's language, emotions, behavior, self-control, learning and memory.</span></span></b>.
