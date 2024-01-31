@@ -80,7 +80,7 @@ export const App = () => {
                     This disorder can severely impair the brains prefrontal cortex, which manages
                     executive functions like short-term working memory, inhibition, time-awareness, CNS regulation, and task-switching.
                     <br />
-                    <h3 style={{color: '#909090'}}><i>"It's not you, its <s>me</s> my malfunction prefrontal cortex."</i></h3>
+                    <h3 style={{color: '#909090'}}><i>"It's not you, its <s>me</s> my malfunctioning prefrontal cortex."</i></h3>
                     Despite significant efforts at prevention, you might experience some of the following:
                     <BulletList listItems={relevantSymptoms} />
                     Please know that Lucas is acutely aware of the frustration and inconvenience this can cause.
